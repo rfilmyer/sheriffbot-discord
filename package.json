@@ -1,0 +1,27 @@
+{
+  "name": "sheriffbot-discord",
+  "version": "1.0.0",
+  "description": "howdy. i'm the sheriff of discord bots.",
+  "main": "app.js",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rfilmyer/sheriffbot-discord.git"
+  },
+  "keywords": [
+    "discord",
+    "chatbot"
+  ],
+  "author": "Roger Filmyer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rfilmyer/sheriffbot-discord/issues"
+  },
+  "homepage": "https://github.com/rfilmyer/sheriffbot-discord#readme"
+}

@@ -1,8 +1,9 @@
 const emojiDescriptionList = require('./emojiLookup.json')
-const discordConfig = require('./config.json')
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
+
+const discordToken = process.env.DISCORD_TOKEN
 
 client.on('ready', () => {
 	console.log("howdy 🤠")
@@ -20,7 +21,7 @@ client.on('message', message => {
 	}
 })
 
-client.login(discordConfig["token"])
+client.login(discordToken)
 	.catch(console.error)
 
 
