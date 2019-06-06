@@ -1,4 +1,7 @@
-const emojiDescriptionList = require('./emojiLookup.json')
+const emojiDescriptionList = require('./emojiLookup.json');
+
+const GraphemeSplitter = require("grapheme-splitter");
+const splitter = new GraphemeSplitter();
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
@@ -14,7 +17,7 @@ client.on('message', message => {
 	const messageContentSplit = message.content.split(' ')
 	if (messageContentSplit[0] === '!sheriff') {
 		const replaceEmojiString = messageContentSplit[1] || randomEmoji();
-		const replaceEmojiArray = [...replaceEmojiString];
+		const replaceEmojiArray = splitter.splitGraphemes(replaceEmojiString);
 		const sheriffText = messageContentSplit.slice(2,).join('');
 		const finalSheriff = withBottomText(replaceEmojiArray, sheriffText || undefined);
 		message.channel.send(finalSheriff)
